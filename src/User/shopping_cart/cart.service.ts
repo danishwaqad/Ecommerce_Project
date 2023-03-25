@@ -12,6 +12,7 @@ export class CartService {
   constructor(
     @InjectModel('Cart') private readonly cartModel: Model<CartDocument>,
   ) {
+    console.log('test');
     this.transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 465,
