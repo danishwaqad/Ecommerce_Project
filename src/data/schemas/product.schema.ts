@@ -21,5 +21,7 @@ export class Product {
 
   @Prop({ default: 'No value is available in this field' })
   product_description: string;
+  @Prop()
+  user_id: string;
 }
 export const ProductSchema = SchemaFactory.createForClass(Product);

@@ -2,11 +2,12 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
-import { ProductModule } from './Admin/products/product.module';
+import { ProductModule } from './modules/products/product.module';
 import { JwtAuthGuard } from './Common/auth/guards/jwt-auth.guard';
 import { AuthModule } from './Common/auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
-import { CartModule } from './User/shopping_cart/cart.module';
+import { CartModule } from './modules/shopping_cart/cart.module';
+import { OrderModule } from './modules/order/order.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { CartModule } from './User/shopping_cart/cart.module';
     ProductModule,
     AuthModule,
     CartModule,
+    OrderModule,
   ],
   controllers: [AppController],
   providers: [

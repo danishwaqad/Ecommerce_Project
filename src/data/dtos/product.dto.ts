@@ -28,6 +28,11 @@ export class ProductDto {
   @IsNotEmpty()
   product_original_name: string;
 
+  @ApiProperty()
+  @IsString()
+  @IsNotEmpty()
+  user_id: string;
+
   @IsOptional()
   product_description: string;
 }
